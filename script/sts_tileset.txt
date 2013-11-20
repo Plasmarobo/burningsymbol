@@ -1,0 +1,3 @@
+ent.nel
+1;Plains;Plains;Description!;2;0;ent.nel;
+2;Hut;Hut;This be a hut;2;0;ent.nel;

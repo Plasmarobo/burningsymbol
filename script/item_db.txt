@@ -1,0 +1,29 @@
+promote_type = 1
+stat_type = 2
+misc_type = 3
+sword_type = 4
+axe_type = 5
+lance_type = 6
+bow_type = 7
+dark_type = 8
+light_type = 9
+staff_type = 10
+ring_type = 11
+
+
+item = {}
+item.type = sword_type
+item.uses = 25
+item.aquire_src = ""
+item.use_src = ""
+item.unuse_src = ""
+item.lose_src = ""
+item.power = 5
+item.range = 1
+item.name = "Iron Sword"
+item.desc = "A crude iron weapon"
+item.nel = "items.nel"
+item.icon = "sword_icon"
+item.ent = "sword_icon"
+
+DefineItem(item);

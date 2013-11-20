@@ -1,0 +1,7 @@
+DebugM("Overriding Script Mode 0")
+DebugM(map)
+cur = GetCursor(map);
+SetAsTarget(map, GetUnitAt(map, GetMapX(cur), GetMapY(cur)))
+SetMapModeScript(map, 0, "attack_select.txt");
+SetMapMode(map,0);
+KillState(state);

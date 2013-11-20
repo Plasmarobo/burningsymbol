@@ -1,0 +1,31 @@
+DebugM("Invoke!")
+--this = map
+--source = tile
+--target = uint (probably null)
+if(source ~= nil) then
+x = GetMapX(source)
+y = GetMapY(source)
+message = string.format("Position: %u X %u Y", x, y)
+DebugM(message)
+end
+mv = {}
+mv.end_anim = 0
+mv.move_anim = 1
+mv.time = 500
+mv.dir = 0
+mv.dist = 1
+DebugM("Queuing Move")
+QueueMove(this,target,mv)
+mv.dir = 1;
+mv.dist = 5;
+mv.time = 2500;
+QueueMove(this,target,mv)
+mv.dir = 0;
+mv.dist = -1;
+mv.time = 500;
+QueueMove(this,target, mv)
+mv.dir = 1;
+mv.dist = -1;
+QueueMove(this, target,mv)
+DebugM("Running Submenu")
+--RunScript("submenu.txt")

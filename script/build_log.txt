@@ -1,0 +1,198 @@
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Input.cpp: In constructor ‘Input::EventQueue::EventQueue()’:
+Input.cpp:40: warning: suggest parentheses around assignment used as truth value
+Input.cpp: At global scope:
+Input.cpp:228: error: ‘void Input::DumpIEventToCMD(Input::IEvent)’ should have been declared inside ‘Input’
+Input.cpp: In function ‘void Input::DumpInputToCMD(Input::EventQueue*&)’:
+Input.cpp:241: error: invalid initialization of non-const reference of type ‘Input::IEvent&’ from a temporary of type ‘Input::IEvent’
+Input.h:70: error: in passing argument 1 of ‘void Input::DumpIEventToCMD(Input::IEvent&)’
+Message.cpp: In member function ‘void Printer::Print(cScreen*, std::string, int, int)’:
+Message.cpp:66: warning: comparison between signed and unsigned integer expressions
+Message.cpp: In member function ‘void Printer::Print(cScreen*, std::string, SDL_Rect)’:
+Message.cpp:83: warning: comparison between signed and unsigned integer expressions
+Message.cpp: In member function ‘void Printer::PrintCenter(cScreen*, std::string, SDL_Rect)’:
+Message.cpp:115: warning: comparison between signed and unsigned integer expressions
+Message.cpp:119: warning: comparison between signed and unsigned integer expressions
+Message.cpp: In member function ‘void Printer::Write(cScreen*, SDL_Rect, cMessage, unsigned int)’:
+Message.cpp:131: warning: comparison between signed and unsigned integer expressions
+Message.cpp: In member function ‘void Printer::Write(cScreen*, cMessage, unsigned int)’:
+Message.cpp:145: warning: comparison between signed and unsigned integer expressions
+Message.cpp: In member function ‘void Printer::Write(cScreen*, SDL_Rect, cMessage*, unsigned int)’:
+Message.cpp:158: warning: comparison between signed and unsigned integer expressions
+Message.cpp: In member function ‘void Printer::Write(cScreen*, cMessage*, unsigned int)’:
+Message.cpp:172: warning: comparison between signed and unsigned integer expressions
+astar.h: At global scope:
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Entities.cpp:13:21: error: windows.h: No such file or directory
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+OrderedPool.cpp: In member function ‘virtual void OrderedPool::DrawAll(cScreen*, Printer*)’:
+OrderedPool.cpp:26: error: ‘>>’ should be ‘> >’ within a nested template argument list
+Input.h: At global scope:
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Resources.cpp: In member function ‘void ResourceManager::Shutdown()’:
+Resources.cpp:77: warning: comparison between signed and unsigned integer expressions
+Resources.cpp: In member function ‘void ResourceManager::Run(cScreen*)’:
+Resources.cpp:143: warning: comparison between signed and unsigned integer expressions
+Resources.cpp: In member function ‘cImage* ResourceManager::GetImage(std::string)’:
+Resources.cpp:170: warning: comparison between signed and unsigned integer expressions
+Resources.cpp: In member function ‘bool ResourceManager::SelectNextPartyUnit(std::string)’:
+Resources.cpp:372: warning: comparison between signed and unsigned integer expressions
+Resources.cpp: In member function ‘bool ResourceManager::SelectNextPartyUnit(DefUnit*)’:
+Resources.cpp:381: warning: comparison between signed and unsigned integer expressions
+Resources.cpp: In member function ‘DefUnit* ResourceManager::GetNextPartyUnit()’:
+Resources.cpp:399: warning: comparison between signed and unsigned integer expressions
+Resources.cpp: In member function ‘bool ResourceManager::SelectPartyUnit(unsigned int, DefUnit*)’:
+Resources.cpp:369: warning: control reaches end of non-void function
+Resources.cpp: In member function ‘bool ResourceManager::SelectPartyUnit(unsigned int, std::string)’:
+Resources.cpp:363: warning: control reaches end of non-void function
+astar.h: At global scope:
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Tile.cpp: In constructor ‘Tile::Tile()’:
+Tile.cpp:144: error: ‘Terrain’ is not a class or namespace
+State.cpp: In member function ‘virtual void State::Create(bool, bool, Uint32, std::string, std::string, std::string, std::vector<State*, std::allocator<State*> >*)’:
+State.cpp:94: error: ‘lua_open’ was not declared in this scope
+Input.h: At global scope:
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Map.cpp: In constructor ‘Camera::Camera()’:
+Map.cpp:109: warning: overflow in implicit constant conversion
+Map.cpp:110: warning: overflow in implicit constant conversion
+Map.cpp: In member function ‘void Map::UpdateTileRef(int, int, Tile_Ref*)’:
+Map.cpp:296: warning: comparison between signed and unsigned integer expressions
+Map.cpp:296: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘void Map::_UpdateTiles()’:
+Map.cpp:305: warning: comparison between signed and unsigned integer expressions
+Map.cpp:306: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘void Map::_CommonInputProc(Input::IEvent&)’:
+Map.cpp:332: warning: comparison between signed and unsigned integer expressions
+Map.cpp:340: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘void Map::_CommandMode(Input::IEvent&)’:
+Map.cpp:389: warning: comparison between signed and unsigned integer expressions
+Map.cpp:397: warning: comparison between signed and unsigned integer expressions
+Map.cpp:373: warning: unused variable ‘plength’
+Map.cpp:374: warning: unused variable ‘anim’
+Map.cpp: In member function ‘void Map::_ActionMode(Input::IEvent&)’:
+Map.cpp:582: error: expected `)' before ‘defer_target’
+Map.cpp: In member function ‘astar::path_entry* Map::_BuildPath(int, int, int, int, int, int)’:
+Map.cpp:596: warning: comparison between signed and unsigned integer expressions
+Map.cpp:598: warning: comparison between signed and unsigned integer expressions
+Map.cpp:599: warning: comparison between signed and unsigned integer expressions
+Map.cpp:606: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘void Map::SetTiles(Tile_Ref***, ResourceManager*)’:
+Map.cpp:952: warning: comparison between signed and unsigned integer expressions
+Map.cpp:953: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘void Map::Create(ResourceManager*, bool, bool, Uint32, std::string, std::string, std::string, std::string, std::vector<State*, std::allocator<State*> >*, Tile_Ref***, unsigned int, unsigned int, unsigned int, unsigned int, Coord*, unsigned int)’:
+Map.cpp:975: error: ‘lua_open’ was not declared in this scope
+Map.cpp: In member function ‘Tile_Ref* Map::Select(int, int)’:
+Map.cpp:1002: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1002: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘void Map::Free()’:
+Map.cpp:1011: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘void Map::_HandleCam(unsigned int)’:
+Map.cpp:1051: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1053: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1055: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1057: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1039: warning: unused variable ‘offx’
+Map.cpp:1040: warning: unused variable ‘offy’
+Map.cpp: In member function ‘Tile_Ref* Map::GetTile(int, int)’:
+Map.cpp:1095: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1095: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘void Map::SetTrigger(Trigger*, int, int)’:
+Map.cpp:1111: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1111: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘Trigger* Map::GetTrigger(int, int)’:
+Map.cpp:1119: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1119: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘void Map::ActivateTrigger(int, int)’:
+Map.cpp:1126: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1126: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘Coord Map::GetPlacement(int)’:
+Map.cpp:1177: warning: comparison between signed and unsigned integer expressions
+Map.cpp: In member function ‘bool Map::SetCommandMode(InstUnit*)’:
+Map.cpp:1214: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1218: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1226: error: ‘pow’ was not declared in this scope
+Map.cpp:1227: error: ‘PathType’ is not a class or namespace
+Map.cpp:1229: error: ‘PathType’ is not a class or namespace
+Map.cpp:1207: warning: unused variable ‘count’
+Map.cpp:1208: warning: unused variable ‘cx’
+Map.cpp:1209: warning: unused variable ‘cy’
+Map.cpp: In member function ‘bool Map::TryCommandTile(int, int)’:
+Map.cpp:1248: warning: comparison between signed and unsigned integer expressions
+Map.cpp:1248: warning: comparison between signed and unsigned integer expressions
+astar.h: At global scope:
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Dialog.cpp: In function ‘State* StartDialog(std::string, std::vector<State*, std::allocator<State*> >*)’:
+Dialog.cpp:15: error: ‘lua_open’ was not declared in this scope
+astar.h: At global scope:
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Menu.cpp: In member function ‘void MenuList::_ReorderMenu()’:
+Menu.cpp:327: warning: comparison between signed and unsigned integer expressions
+Menu.cpp: In member function ‘void MenuList::ScrollDown()’:
+Menu.cpp:360: warning: comparison between signed and unsigned integer expressions
+Menu.cpp: In member function ‘virtual void MenuList::Draw(cScreen*)’:
+Menu.cpp:460: warning: comparison between signed and unsigned integer expressions
+Menu.cpp: In member function ‘virtual void Menu::Create(bool, bool, Uint32, std::string, std::string, std::string, std::vector<State*, std::allocator<State*> >*)’:
+Menu.cpp:540: error: ‘lua_open’ was not declared in this scope
+Input.h: At global scope:
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+ScriptingLibraries.cpp: In function ‘int AddMenuItem(lua_State*)’:
+ScriptingLibraries.cpp:753: warning: unused variable ‘sel’
+ScriptingLibraries.cpp: In function ‘int ResetAnimation(lua_State*)’:
+ScriptingLibraries.cpp:888: warning: unused variable ‘e’
+ScriptingLibraries.cpp: In function ‘int GetItems(lua_State*)’:
+ScriptingLibraries.cpp:1184: warning: unused variable ‘d’
+ScriptingLibraries.cpp: In function ‘int SetItems(lua_State*)’:
+ScriptingLibraries.cpp:1192: warning: unused variable ‘d’
+ScriptingLibraries.cpp: In function ‘int InstanceAllParty(lua_State*)’:
+ScriptingLibraries.cpp:1370: warning: comparison between signed and unsigned integer expressions
+astar.h: At global scope:
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Data.cpp: In function ‘Map* BuildMapFromFile(std::string, ResourceManager*, std::vector<State*, std::allocator<State*> >*)’:
+Data.cpp:52: error: ‘>>’ should be ‘> >’ within a nested template argument list
+Data.cpp:249: warning: comparison between signed and unsigned integer expressions
+Data.cpp:44: warning: unused variable ‘d’
+astar.h: At global scope:
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Data.cpp: In function ‘Map* BuildMapFromFile(std::string, ResourceManager*, std::vector<State*, std::allocator<State*> >*)’:
+Data.cpp:52: error: ‘>>’ should be ‘> >’ within a nested template argument list
+Data.cpp:249: warning: comparison between signed and unsigned integer expressions
+Data.cpp:44: warning: unused variable ‘d’
+astar.h: At global scope:
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Status.cpp: In member function ‘virtual void TileWindow::Draw(cScreen*)’:
+Status.cpp:482: warning: unused variable ‘w_o’
+Input.h: At global scope:
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+Unit.cpp: In constructor ‘DefUnit::DefUnit()’:
+Unit.cpp:9: warning: suggest parentheses around assignment used as truth value
+Unit.cpp: In member function ‘void InstUnit::_Build()’:
+Unit.cpp:58: error: no matching function for call to ‘std::basic_ifstream<char, std::char_traits<char> >::open(std::string&)’
+/usr/include/c++/4.2.1/fstream:518: note: candidates are: void std::basic_ifstream<_CharT, _Traits>::open(const char*, std::_Ios_Openmode) [with _CharT = char, _Traits = std::char_traits<char>]
+Unit.cpp:57: warning: unused variable ‘buf’
+astar.h: At global scope:
+astar.h:13: warning: ‘astar::dx’ defined but not used
+astar.h:14: warning: ‘astar::dy’ defined but not used
+Input.h:21: warning: ‘Input::MAX_HOLD_TIME’ defined but not used
+make: *** [debug] Error 1

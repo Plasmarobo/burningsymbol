@@ -1,0 +1,76 @@
+
+x = GetUnitX(source)
+y = GetUnitY(source)
+DebugM(GetUnitName(target))
+DebugM(GetUnitName(source))
+DebugM("Target Locale: " .. x .. " " .. y);
+--Check attack range instead of just adjacency 
+left = GetUnitAt(this, x+1, y)
+right = GetUnitAt(this, x-1, y)
+up = GetUnitAt(this, x, y-1)
+down = GetUnitAt(this, x, y+1)
+cur = GetCursor(this);
+
+x = 0
+y = 0
+
+downbp = downb
+downb = GetKeyState(4);
+upbp = upb
+upb = GetKeyState(3); 
+rightbp = rightb
+rightb = GetKeyState(6); 
+leftbp = leftb
+leftb = GetKeyState(5);
+enterbp = enterb
+enterb = GetKeyState(0);
+
+if (downb.state == 0) and (down ~= nil) and (downbp.state == 1) then y = 1 end
+if (upb.state == 0) and (up ~= nil) and (upbp.state == 1) then y = -1 end
+if (rightb.state == 0) and (left ~= nil) and (rightbp.state == 1) then x = 1 end
+if (leftb.state == 0) and (right ~= nil) and (leftbp.state == 1) then x = -1 end
+if (enterb.state == 0) and (GetMapX(cur) ~= GetMapX(target)) and (GetMapY(cur) ~= GetMapY(target)) and (enterbp.state == 1)
+then
+DebugM("targeted")
+defender = GetUnitAt(this, GetMapX(cur), GetMapY(cur))
+item_menu = NewMenu(0,0,0,"", "", "", stack)
+DebugM("Getting items for list")
+GiveItem(source, "Iron Sword");
+valid_items = GetBattleItems(source)
+list = {}
+list.x = 200
+list.y = 200
+list.w = 100
+list.h = 500
+list.load = ''
+list.trigger = 'select_unit.txt'
+list.exit = ''
+list.text = 'Select your Party:'
+list.file = 'ent.nel'
+list.name = 'bkg'
+list.selector = 'list_sel'
+list_inst = AddMenuList(item_menu, list, 0);
+
+list_item = {}
+list_item.select = 'start_battle.txt';
+list_item.anim = 1;
+DebugM("Number of items " .. # valid_items);
+for i = 0, # valid_items, 1 do 
+--Enumerate Inventory
+DebugM("Index " .. i);
+list_item.target = valid_items[i];
+list_item.title = GetItemName(valid_items[i]);
+list_item.desc = "";
+list_item.icon = GetItemIcon(valid_items[i]);
+PushListItem(list_inst, list_item);
+end
+--Battle_Select target defender
+AddMenu(stack, item_menu)
+ScrollZero( list_inst );
+--Suspend the map state
+suspend(this)
+end
+
+if x ~= 0 or y ~= 0 then
+MoveCursor(map, x, y)
+end

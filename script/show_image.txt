@@ -1,0 +1,4 @@
+Anim = MakeAnimation(1,1);
+MakeFrameSet(Anim, 0, 0,0,0,200,400, "end" );
+btn = MakeEntity("graphics\\button.png", Anim2, 0, 0);
+AddToState(btn);

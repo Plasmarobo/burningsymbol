@@ -1,0 +1,9 @@
+DebugM("Pushing Map, killing select menu")
+map = LoadMap(stack, "data\\map01.txt")
+--enemy = GetUnit("evil");
+--AddToMap(state, enemy, "e" , 2,2)
+DebugM("Killing State")
+KillState(state)
+DebugM("Pushing Map")
+AddMap(stack, map);
+DebugM("Done");

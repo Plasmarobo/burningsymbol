@@ -1,0 +1,48 @@
+--Source = Cursor 
+--Target = Unit Invoking on
+--This = Map
+button_template = {};
+sx = GetMapX(source);
+sy = GetMapY(source);
+w, h = ViewportDim();
+tw, th = TileDim(this);
+x = sx*tw;
+y = sy*th;
+button_template.w = 256;
+button_template.h = 64;
+button_template.x = 0;
+DebugM("Placing button")
+if (x >= (w/2)) then 
+	button_template.x=(w-button_template.w);
+end
+i = 0;
+
+if (y <= (h/2)) then
+	button_template.y=(button_template.h*i);
+else
+	button_template.y=h-(button_template.h*i);
+end
+
+button_template.load = 'select.txt'
+button_template.trigger = 'start_move.txt'
+button_template.exit = 'deselect.txt'
+button_template.txt = 'Menu'
+button_template.file = 'ent.nel'
+button_template.name = 'Button'
+button_template.text = 'Move'
+submenu = NewMenu(0, 1, 0, "", "", "", stack);
+b_inst = AddMenuItem(submenu, button_template, 1)
+i = 1;
+if (y <= (h/2)) then
+	button_template.y=(button_template.h*i);
+else
+	button_template.y=h-(button_template.h*i);
+end
+button_template.text = 'Back'
+button_template.trigger = 'anti_press.txt'
+b_inst2 = AddMenuItem(submenu, button_template, 0);
+LinkDown(b_inst, b_inst2);
+Suspend(this)
+AddMenu(stack, submenu)
+DebugM("INVOKE")
+Resume(this)

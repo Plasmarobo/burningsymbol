@@ -1,0 +1,45 @@
+--This script parses menu input and updates the current 'state'
+--This will probably run once per frame, program accordingly,
+--an internal loop will not stall drawing, but will stall script logic
+--This script will run a VERTICAL STYLE MENU
+
+menu = GetState();
+bc = GetButtonCount(menu);
+downb = CheckEventQueue(3); 
+upb = CheckEventQueue(2);
+enterb = CheckEventQueue(0);
+local downt = 0;
+local upt = 0;
+local entert = 0;
+if (downb == 1) then
+	downt = PopKeyEvent(3);
+	if (downt.state == 0) then
+	for i = 0, bc-1 do
+		if ButtonSelected ( menu , i ) then
+			DeselectButton(menu, i);
+			selected = i
+		end
+	end
+	selected = selected +1
+	if (selected  < 1) then
+		selected = bc -1;
+	elseif (selected == bc) then
+		selected = 1;
+	end
+	SelectButton(menu, selected)
+	end
+end
+
+ls, lt = GetKeyState(4);
+--right = GetKey(5);
+
+
+if(ls == 1) then
+	--Suspend(10);
+	PopState();
+	ResumeState(GetState());
+end
+
+
+
+

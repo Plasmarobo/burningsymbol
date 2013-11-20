@@ -1,0 +1,2 @@
+DebugM("Starting battle!");
+item_used = GetSelectedItem(list_inst);

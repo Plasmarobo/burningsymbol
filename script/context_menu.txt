@@ -1,0 +1,25 @@
+-- This script creates the context menu
+RunScript("script\\font.txt");
+Anim = MakeAnimation(1,1);
+
+MakeFrameSet(Anim, 0, 0,0,0,200,400, "end" );
+
+Anim2 = MakeAnimation(2,1,1);
+
+ MakeFrameSet(Anim2, 0, 
+ 0,0,0,256,64,
+ "end" );
+ MakeFrameSet(Anim2, 1,
+ 0,0,64,256,64,
+ "end");
+ btn = MakeEntity("graphics\\button.png", Anim2, 410, 110);
+ SetBounds(btn, 0, 0, 256,64);
+ btn2 = MakeEntity("graphics\\button.png", Anim2, 410, 310);
+ window = MakeEntity("graphics\\menubkg.png", Anim,400,100);
+ menu = OpenMenuEx(1,0,window, "", "script\\context_system.txt", ""); 
+ AddButtonEx(menu, btn, "script\\show_image.txt", "B1", 1);
+ AddButtonEx(menu, btn2, "", "B2", 0);
+ last = GetState();
+ SuspendState(last);
+ AddState(menu);
+ 

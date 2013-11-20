@@ -1,0 +1,54 @@
+--Define Unit Carson
+DebugM("Loading Units")
+unit = {}
+unit.mhp = 10;
+unit.shp = 10;
+unit.str = 5;
+unit.skl = 2;
+unit.spd = 2;
+unit.lck = 4;
+unit.def = 4;
+unit.res = 2;
+unit.con = 3;
+unit.mov = 5;
+unit.mtp = 1;
+unit.key = 7;
+unit.name = "Carson";
+unit.desc = "A Brute of a man maybe?";
+unit.file = "carson.nel"
+unit.mug = "carson_mug";
+unit.ico = "carson_ico";
+unit.bat = "carson_bat";
+unit.swd = 1;
+unit.axe = 1;
+unit.lnc = 1;
+unit.bow = 1;
+unit.anm = 1;
+unit.drk = 1;
+unit.lht = 1;
+unit.stf = 1;
+unit.rng = 1;
+unit.lev = 1;
+unit.exp = 1;
+unit.select = "unit_context_menu.txt"
+unit.support = "";
+unit.death = "";
+unit.load = "";
+unit.level = "";
+unit.fight = "";
+unit.win = "";
+unit.lose = "";
+unit.misc = "";
+unit.ai = "";
+unit.enabled = 1;
+
+DefineUnit(unit, "party");
+
+unit.name="evil"
+unit.file="evil.nel"
+unit.mug="evil_mug"
+unit.ico="evil_ico"
+unit.bat="evil_bat"
+unit.select="unit_info.txt"
+DefineUnit(unit, "enemy");
+DebugM("Units Defined")

@@ -1,0 +1,49 @@
+-- This script creates the context menu
+
+--Possible menu items:
+--Attack
+--Rescue
+--Take
+--Item
+--Trade
+--Support/Talk
+--Wait
+DebugM("Invoked")
+-- This script creates the context menu
+DebugM("Loading menu");
+menu = NewMenu(1,0,0,"", "", "", stack)
+DebugM("Building Button");
+DebugM(source);
+win = GetWindow();
+button = {}
+button.w = 128
+button.h = 32
+button.x = win.w - button.w
+button.y = 0
+button.load = 'select.txt'
+button.trigger = 'Attack_Mode.txt'
+button.exit = 'deselect.txt'
+button.text = 'Attack'
+button.file = 'ent.nel'
+button.name = 'Button'
+DebugM("Adding Atk_Btn")
+linka = AddMenuItem(menu, button, 1);
+DebugM("Adding Rescue Button")
+button.y = (button.y + 32)
+button.text = 'Rescue'
+button.trigger = 'Rescue_Mode.txt'
+--Only add rescue buttion if
+--TODO
+DebugM("Adding Quit Button")
+button.y = (button.y + 32)
+button.text = 'Quit'
+button.trigger = 'exit_menu.txt'
+linkb = AddMenuItem(menu, button, 0);
+DebugM("Linking Buttons");
+LinkDown(linka, linkb)
+LinkUp(linka, linkb)
+DebugM("Adding Menu")
+AddSubMenu(stack, menu);
+DebugM("Menu load complete")
+DebugM(map);
+DebugM("Done");

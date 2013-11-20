@@ -1,0 +1,51 @@
+DebugM("Initializing")
+Initialize();
+RunScript("script\\font.txt")
+DebugM("Loading tiles")
+LoadTileSet("sts_tileset.txt")
+DebugM("Loading items")
+RunScript("item_db.txt")
+DebugM("Loading menu");
+menu = NewMenu(0,0,0,"", "", "", stack)
+DebugM("Building Button");
+button = {}
+button.x = 300
+button.y = 300
+button.w = 256
+button.h = 64
+button.load = 'select.txt'
+button.trigger = 'press.txt'
+button.exit = 'deselect.txt'
+button.text = 'Start'
+button.file = 'ent.nel'
+button.name = 'Button'
+DebugM("Adding Button1")
+linka = AddMenuItem(menu, button, 1);
+DebugM("Adding Button2")
+button.y = 500
+button.text = 'Quit'
+button.trigger = 'quit.txt'
+linkb = AddMenuItem(menu, button, 0);
+DebugM("Linking Buttons");
+LinkDown(linka, linkb)
+DebugM("Loading Background")
+bkg = GetEntity("ent.nel", "bkg")
+AddToState(menu, bkg);
+DebugM("Adding Menu")
+AddMenu(stack, menu);
+DebugM("Menu load complete")
+DebugM("Adding message to resources")
+AddMsg("Hello Mister grey", 100, 100, 1000, 1000, 250)
+DebugM("Message added")
+--Override party limit for debug purpose
+SetPartyLimit(5);
+DebugM("Party Limit Set to 5");
+DebugM("Loading Default Map");
+--RunScript("unit_add_test.txt")
+--DebugM("Pushing Map, killing select menu")
+--map = LoadMap(stack, "data\\map01.txt")
+--DebugM("Killing State")
+--KillState(state)
+--DebugM("Pushing Map")
+--AddMap(stack, map);
+DebugM("Done");

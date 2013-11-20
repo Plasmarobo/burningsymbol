@@ -1,0 +1,11 @@
+DebugM("Item Triggered")
+--Use the target interface to shift the entity to the map
+--This script should be called from a menu index
+--The run on script will set the menu list as 'this'
+--The unit argument will be set to target
+--The list index object will be set to source
+if (SelectNextPartyMember(source)) then
+	--We've added it to the buffer, remove the item
+	PopListItem(this, target)
+	DebugM("Item removed!")
+end

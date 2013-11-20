@@ -1,0 +1,13 @@
+--tiles.png
+function DefineTile16(tile, x,y)
+Temp = MakeAnimation(1,1);
+MakeFrameSet(Temp, 0,
+ 0, x, y, 16, 16, 
+ "end"
+ );
+DefineTile(tile,"graphics\\tiles.png", Temp, 0,0, 0, "","");
+end
+AREA1 = CreateMap(2,2,"","");
+DefineTile16(GetTile(AREA1,0,0),1,1);
+--Plains = DefineTile16(18,1);
+AddState(AREA1);

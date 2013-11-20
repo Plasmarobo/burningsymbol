@@ -1,0 +1,78 @@
+--A unit test dialog (adds a unit to the previous map state)
+DebugM("Calling Load Script");
+RunScript("loadunit.txt")
+DebugM("Returned to Parent, Loading List");
+--List item definition
+
+
+list = {}
+list.x = 200
+list.y = 200
+list.w = 100
+list.h = 500
+list.load = ''
+list.trigger = 'select_unit.txt'
+list.exit = ''
+list.text = 'Select your Party:'
+list.file = 'ent.nel'
+list.name = 'bkg'
+list.selector = 'list_sel'
+--DUMP_STACK()
+--Menu definition
+DebugM("Creating New Menu")
+menu = NewMenu(0,0,0,"", "", "", stack)
+button = {}
+button.x = 0
+button.y = 200
+button.w = 256
+button.h = 64
+button.load = 'select.txt'
+button.trigger = 'anti_press.txt'
+button.exit = 'deselect.txt'
+button.text = 'Back'
+button.file = 'ent.nel'
+button.name = 'Button'
+DebugM("Adding Button")
+b_inst = AddMenuItem(menu, button, 1);
+button.trigger = 'loadmap1_press.txt'
+button.y = 266
+button.text = 'Go!'
+DebugM("Adding Go Button")
+go_inst = AddMenuItem(menu, button, 0);
+DebugM("Linking Buttons");
+LinkDown(b_inst, go_inst);
+DebugM("Adding Menu List")
+list_inst = AddMenuList(menu, list, 0);
+DebugM("List added")
+list_item = {}
+list_item.title = 'Carson';
+list_item.desc = 'A rather rude man';
+list_item.select = 'select_map_pos.txt';
+list_item.target = GetUnit("Carson");
+list_item.anim = 1;
+DebugM("Fetching Icon");
+ent = GetEntity("carson.nel", "carson_ico");
+if (ent == nil) then
+	DebugM("Error loading Entity");
+end
+list_item.icon = ent;
+if (list_item.icon == nil) then
+	DebugM("Error copying Entity");
+end
+DebugM("Pushing Menu Item");
+PushListItem(list_inst, list_item);
+DebugM("Linking menu objects");
+LinkLeft(list_inst, b_inst);
+list_item.title = 'Other Carson';
+list_item.icon = GetEntity("carson.nel", "carson_ico");
+list_item.target = GetUnit("Carson");
+PushListItem(list_inst, list_item);
+bkg = GetEntity("ent.nel", "bkg");
+DebugM("Adding Background");
+AddToState(menu, bkg);
+
+DebugM("Pushing Menu")
+AddMenu(stack, menu)
+DebugM("Initializing Menu");
+ScrollZero( list_inst );
+DebugM("Exiting Add Test")

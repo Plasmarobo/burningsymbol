@@ -1,0 +1,12 @@
+DebugM("Press detected")
+SetAnimation(this, 0); Wait(150)
+SetAnimation(this, 1); Wait(150)
+SetAnimation(this, 0); Wait(150)
+--map = LoadMap("data\\map01.txt")
+DebugM("Suspending")
+Suspend(state)
+DebugM("Calling Unit Add")
+RunScript("unit_add_test.txt")
+--AddMap(stack, map);
+--SetCam(map, 30, 30)
+--MakeExclusive(map)

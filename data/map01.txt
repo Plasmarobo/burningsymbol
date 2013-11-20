@@ -1,0 +1,60 @@
+MAP
+FILENAME 
+graphics\\tile.png
+NAME
+Map01
+INIT_SCRIPT
+script\\map_init.txt
+CLOSE_SCRIPT
+script\\map_exit.txt
+IDLE_SCRIPT
+script\\map_idle.txt
+INVOKE_SCRIPT
+submenu.txt
+SELECTOR
+NEL ent.nel:selector
+OVERLAY
+NEL ent.nel:overlay
+PATH
+NEL ent.nel:path
+OBJPANEL
+NEL ent.nel:unitwindow
+UNITPANEL
+NEL ent.nel:unitwindow
+TILEPANEL
+NEL ent.nel:unitwindow
+MAP_WIDTH 
+8
+MAP_HEIGHT
+16
+TILE_WIDTH
+16
+TILE_HEIGHT
+16
+PLACEMENTS 
+5
+PLACEBEGIN
+4 4;
+0 2;
+1 1;
+3 2;
+4 0;
+PLACEEND
+TILEBEGIN
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+Plains;Plains;Plains;Plains;Plains;Plains;Plains;Plains;
+TILEEND

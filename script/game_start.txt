@@ -1,0 +1,23 @@
+pool = NewEntityPool();
+Anim = MakeAnimation(1,2);
+MakeFrameSet(Anim, 0,
+ 1000,0,0,64,64,
+ 1000,64,0,64,64,
+ "end"
+ );
+--E = MakeEntity("graphics\\test.png",Anim,0,0);
+--P = MakeEntity("graphics\\test.png",Anim, 200,200);
+E = MakeEntity("graphics\\tile.png",Anim,0,0);
+P = MakeEntity("graphics\\tile.png",Anim, 200,200);
+s = BuildState(1,1,0,"","","");
+AddState(s);
+PushEntity(E,pool);
+PushEntity(P,pool);
+SelectPool(s,pool);
+t = BuildState(0,1,44,"","","");
+AddState(t);
+G = MakeEntity("graphics\\tile.png",Anim, 400,400);
+pool2 = NewEntityPool();
+PushEntity(G, pool2);
+SelectPool(t,pool2);
+

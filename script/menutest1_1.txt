@@ -1,0 +1,29 @@
+--Menu Test!
+RunScript("script\font.txt");
+Mwin = OpenMessageWindow(50,50,128,128, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+AddState(Mwin);
+--Suspend(4000);
+PopMsg(Mwin);
+AddDialog(Mwin, "abcdefghijklmnopqrstuvwxyz",1,0);
+--Suspend(8000);
+AddDialog(Mwin, "0123456789.,\'\":;!?()&",1000,0);
+--Suspend(2000);
+ClearMsg(Mwin);
+--RunScript("script\tiles.txt");
+--AREA1 = CreateMap(2,2,"","");
+--SetTile(AREA1, 0, 0, Hut);
+--SetTile(AREA1, 1, 0, Plains);
+--SetTile(AREA1, 0, 1, Hut);
+--SetTile(AREA1, 1,1, Plains);
+--AddState(AREA1);
+
+AREA = CreateMap(2,2,"","");
+Temp = MakeAnimation(1,1);
+MakeFrameSet(Temp, 0,
+ 0, 0, 0, 16, 16, 
+ "end"
+ );
+ tile = GetTile(AREA,0,0);
+DefineTile(tile,"graphics\tiles.png", Temp, 0,0, 0, "","");
+--Plains = DefineTile16(18,1);
+AddState(AREA);

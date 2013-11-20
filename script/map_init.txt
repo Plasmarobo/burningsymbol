@@ -1,0 +1,10 @@
+--Initialize a small test map
+
+DebugM("Instancing Party")
+InstanceAllParty(state);
+enemy = GetUnit("evil");
+AddToMap(state, enemy, 'e', 2,2)
+DebugM("Setting cursor");
+GetCursor(state);
+SetCursor(state, 0, 0);
+DebugM("Setup Complete");

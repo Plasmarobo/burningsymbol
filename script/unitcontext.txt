@@ -1,0 +1,5 @@
+-- the global target should be set
+if (IsValid(target) == 1) then
+	m = GetState()
+	MoveEntity(e, m,7,2)
+end

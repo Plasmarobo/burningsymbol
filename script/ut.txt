@@ -1,0 +1,33 @@
+This is the unit file
+Most of this should be ignored by the parser
+It will continue until it finds an END tag
+By default just load until File ends
+UNIT
+NAME Gaius
+ENTITY ENT_STD.txt
+Stats -- Parser doesn't care about these lines
+MHP 10
+STR 10
+SKL 10
+SPD 10
+LCK 10
+DEF 10
+RES 10
+CON 10
+MOV 10
+MTP 0
+KEY 0
+LEVEL 1
+EndStats -- Parser doesn't care about these comments either
+ID 1
+LOADSCRIPT Gaius_Load.txt
+DEATHSCRIPT Gaius_Death.txt
+LEVELSCRIPT Gaius_Level.txt
+SELECTSCRIPT Gaius_Invoke.txt
+SUPPORTSCRIPT Gaius_Support.txt
+FIGHTSCRIPT Gaius_Fight.txt
+WINSCRIPT Gaius_Win.txt
+LOSESCRIPT Gaius_Lose.txt
+MISCSCRIPT Giaus_Misc.txt
+END
+

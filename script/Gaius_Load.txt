@@ -1,0 +1,44 @@
+DebugM("Script Online")
+DebugM("Unit Creation Begin")
+gaius = {
+mhp = 10,
+shp = 10,
+str = 10,
+skl = 10,
+spd = 10,
+lck = 10,
+def = 10,
+res = 10,
+con = 10,
+mov = 10,
+mtp = 0,
+key = 1,
+name = "Gaius",
+desc = "TOTALLY
+FUCKING
+BADASS",
+ent = "ENT_STD.txt",
+swd = 1,
+axe = 0,
+lnc = 0,
+bow = 0,
+anm = 0,
+drk = 0,
+lht = 0,
+stf = 0,
+rng = 0,
+lev = 1,
+exp = 0,
+support = "Gaius_Support.txt",
+death = "Gaius_Death.txt",
+load = "Gaius_Load.txt",
+level = "Gaius_Level.txt",
+select = "Gaius_Invoke.txt",
+fight = "Gaius_Fight.txt",
+win = "Gaius_Win.txt",
+lose = "Gaius_Lose.txt",
+misc = "Gaius_Misc.txt",
+ai = "Gaius_AI.txt"
+}
+
+myunit = DefineUnit(system, gaius, "party");

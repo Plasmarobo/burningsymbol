@@ -1,0 +1,7 @@
+local ent = GetKeyState(system, 0)
+if ent.state == 1 then
+local obj = GetNextEntity(state)
+if obj ~= nil then
+  Move(obj, 0, 1)
+end
+end
