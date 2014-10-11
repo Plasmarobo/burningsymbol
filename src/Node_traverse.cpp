@@ -1,4 +1,4 @@
-#include "..\FireEmblem\Map.h"
+#include "Map.h"
 
 
 int main(int argc, char **argv){

@@ -25,7 +25,7 @@ void RunOn(lua_State *lua, std::string script, void *t){
 	lua_pushlightuserdata(lua, t);
 	lua_setglobal(lua, "this");//DumpLuaStack(lua);
 	char *str = new char[script.length()];
-	strcpy(str, script.c_str());
+	strcpy_s(str, script.length(), script.c_str());
 	luaL_dofile(lua, str);
 	lua_pushlightuserdata(lua, buffer);
 	lua_setglobal(lua, "this");

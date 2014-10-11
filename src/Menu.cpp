@@ -454,12 +454,7 @@ void MenuList::Draw(cScreen *screen){
 		if(m_animstate.source[m_animstate.current_frame] != NULL)
 			screen->BlitImage(x,y, img, m_animstate.source[m_animstate.current_anim]->frames[m_animstate.current_frame]);
 		else{
-			SDL_Rect r;
-			r.x = 0;
-			r.y = 0;
-			r.w = img->GetSurf()->w;
-			r.h = img->GetSurf()->h;
-			screen->BlitImage(x,y,img, r);
+			screen->BlitImage(x,y,img);
 		}
 	}
 	if(items.size() > 0 ){

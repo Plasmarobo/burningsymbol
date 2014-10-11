@@ -114,8 +114,8 @@ void Tile_Ref::Draw(cScreen *screen){
 		SDL_Rect r;
 		r.x = 0;
 		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
+		r.w = tile_w;
+		r.h = tile_h;
 		screen->BlitImage(x+(map_x*tile_w)+ox,y+(map_y*tile_h)+oy,img, r);
 		MUTEX_UnLock();
 		return;
@@ -126,8 +126,8 @@ void Tile_Ref::Draw(cScreen *screen){
 		SDL_Rect r;
 		r.x = 0;
 		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
+		r.w = tile_w;
+		r.h = tile_h;
 		screen->BlitImage(x+(map_x*tile_w)+ox,y+(map_y*tile_h)+oy,img, r);
 	}
 	MUTEX_UnLock();

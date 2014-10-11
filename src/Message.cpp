@@ -188,5 +188,5 @@ void Printer::SetFont(std::string fname){
 		return;
 	}
 	//SDL_SetColorKey(letters, SDL_SRCALPHA | SDL_RLEACCEL, SDL_MapRGB(letters->format,240, 103, 162));
-	SDL_SetAlpha(letters, SDL_SRCALPHA, 255);
+	//SDL_SetAlpha(letters, SDL_SRCALPHA, 255);
 }

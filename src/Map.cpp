@@ -103,10 +103,10 @@ void Glide::Stop(double now){
 Camera::Camera(){
 	m_x = 0;
 	m_y = 0;
-	m_x_min = -4000000000;
-	m_y_min = -4000000000;
-	m_x_max = 4000000000;
-	m_y_max = 4000000000;
+	m_x_min = -400000000;
+	m_y_min = -400000000;
+	m_x_max = 400000000;
+	m_y_max = 400000000;
 
 }
 
@@ -575,11 +575,11 @@ void Map::_CommandMode(Input::IEvent &e){
 				switch(ptr->dir){
 				case 0:
 					m.horizontal = 1;
-					m.ent_dist = -t_width;
+					m.ent_dist = -((int)t_width);
 					break;
 				case 1:
 					m.horizontal = 0;
-					m.ent_dist = -t_height;
+					m.ent_dist = -((int)t_height);
 					break;
 				case 2:
 					m.horizontal = 1;

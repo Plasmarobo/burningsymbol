@@ -227,24 +227,14 @@ void Entity::Draw(cScreen *screen){
 		return;
 	MUTEX_Lock();
 	if(m_animstate.source == NULL){
-		SDL_Rect r;
-		r.x = 0;
-		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
-		screen->BlitImage(x,y,img, r);
+		screen->BlitImage(x,y,img);
 		MUTEX_UnLock();
 		return;
 	}
 	if(m_animstate.source[m_animstate.current_anim] != NULL)
 		screen->BlitImage(x+ox,y+oy, img, m_animstate.source[m_animstate.current_anim]->frames[m_animstate.current_frame]);
 	else{
-		SDL_Rect r;
-		r.x = 0;
-		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
-		screen->BlitImage(x+ox,y+oy,img, r);
+		screen->BlitImage(x+ox,y+oy,img);
 	}
 	MUTEX_UnLock();
 }

@@ -166,7 +166,7 @@ void ResourceManager::ClearMessages(){
 	MUTEX_UnLock();
 }
 
-cImage* ResourceManager::GetImage(std::string name){
+cImage* ResourceManager::GetImage(std::string name, SDL_Renderer *renderer){
 	//Warning: This is referenced from within a mutex lock, and outside.
 	//Add logic for conditional locking
 	//MUTEX_Lock();
@@ -181,7 +181,9 @@ cImage* ResourceManager::GetImage(std::string name){
 		printf("Image Load: %s\n", IMG_GetError());
 		return NULL;
 	}
-	cImage *img = new cImage(name, surf);
+
+	cImage *img = new cImage(name, SDL_CreateTextureFromSurface(renderer, surf));
+	SDL_FreeSurface(surf);
 	m_images.push_back(img);
 	//MUTEX_UnLock();
 	return img;

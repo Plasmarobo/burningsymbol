@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB22FD40-BB77-4EEB-B53F-C2696794B693}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BurningSymbol</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>F:\lib\pthreads\include;F:\lib\lua32\include;F:\lib\SDL2_image-2.0.0\include;F:\lib\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\lib\pthreads\lib\x86;F:\lib\lua32;F:\lib\SDL2_image-2.0.0\lib\x86;F:\lib\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;lua52.lib;pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy F:\lib\SDL2-2.0.3\lib\x86\SDL2.dll $(OutputPath)
+copy F:\lib\SDL2_image-2.0.0\lib\x86\*.dll $(OutputPath)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\astar.cpp" />
+    <ClCompile Include="..\..\src\Battle.cpp" />
+    <ClCompile Include="..\..\src\Clock.cpp" />
+    <ClCompile Include="..\..\src\Controller.cpp" />
+    <ClCompile Include="..\..\src\Data.cpp" />
+    <ClCompile Include="..\..\src\Dialog.cpp" />
+    <ClCompile Include="..\..\src\Entities.cpp" />
+    <ClCompile Include="..\..\src\EntityPool.cpp" />
+    <ClCompile Include="..\..\src\Graphics.cpp" />
+    <ClCompile Include="..\..\src\Index.cpp" />
+    <ClCompile Include="..\..\src\Input.cpp" />
+    <ClCompile Include="..\..\src\Items.cpp" />
+    <ClCompile Include="..\..\src\Logic.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\Map.cpp" />
+    <ClCompile Include="..\..\src\Menu.cpp" />
+    <ClCompile Include="..\..\src\Message.cpp" />
+    <ClCompile Include="..\..\src\Node_traverse.cpp" />
+    <ClCompile Include="..\..\src\OrderedPool.cpp" />
+    <ClCompile Include="..\..\src\Resources.cpp" />
+    <ClCompile Include="..\..\src\Scripting.cpp" />
+    <ClCompile Include="..\..\src\ScriptingLibraries.cpp" />
+    <ClCompile Include="..\..\src\Sequence.cpp" />
+    <ClCompile Include="..\..\src\State.cpp" />
+    <ClCompile Include="..\..\src\Status.cpp" />
+    <ClCompile Include="..\..\src\Threading.cpp" />
+    <ClCompile Include="..\..\src\Tile.cpp" />
+    <ClCompile Include="..\..\src\Unit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\astar.h" />
+    <ClInclude Include="..\..\src\Battle.h" />
+    <ClInclude Include="..\..\src\Chapter.h" />
+    <ClInclude Include="..\..\src\Clock.h" />
+    <ClInclude Include="..\..\src\ContextItems.h" />
+    <ClInclude Include="..\..\src\Controller.h" />
+    <ClInclude Include="..\..\src\Data.h" />
+    <ClInclude Include="..\..\src\Dialog.h" />
+    <ClInclude Include="..\..\src\Entities.h" />
+    <ClInclude Include="..\..\src\EntityPool.h" />
+    <ClInclude Include="..\..\src\Events.h" />
+    <ClInclude Include="..\..\src\Game.h" />
+    <ClInclude Include="..\..\src\GameRules.h" />
+    <ClInclude Include="..\..\src\Graphics.h" />
+    <ClInclude Include="..\..\src\Index.h" />
+    <ClInclude Include="..\..\src\Input.h" />
+    <ClInclude Include="..\..\src\Items.h" />
+    <ClInclude Include="..\..\src\Janitor.h" />
+    <ClInclude Include="..\..\src\Logic.h" />
+    <ClInclude Include="..\..\src\Map.h" />
+    <ClInclude Include="..\..\src\Menu.h" />
+    <ClInclude Include="..\..\src\Message.h" />
+    <ClInclude Include="..\..\src\OrderedPool.h" />
+    <ClInclude Include="..\..\src\Resources.h" />
+    <ClInclude Include="..\..\src\Scripting.h" />
+    <ClInclude Include="..\..\src\ScriptingLibraries.h" />
+    <ClInclude Include="..\..\src\SDL_image.h" />
+    <ClInclude Include="..\..\src\Sequence.h" />
+    <ClInclude Include="..\..\src\State.h" />
+    <ClInclude Include="..\..\src\Status.h" />
+    <ClInclude Include="..\..\src\Submenu.h" />
+    <ClInclude Include="..\..\src\Threading.h" />
+    <ClInclude Include="..\..\src\Tile.h" />
+    <ClInclude Include="..\..\src\Trigger.h" />
+    <ClInclude Include="..\..\src\Unit.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

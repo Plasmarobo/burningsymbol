@@ -236,24 +236,14 @@ void ObjectiveWindow::Draw(cScreen *screen){
 		return;
 	MUTEX_Lock();
 	if(m_animstate.source == NULL){
-		SDL_Rect r;
-		r.x = 0;
-		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
-		screen->BlitImage(x,y,img, r);
+		screen->BlitImage(x,y,img);
 		MUTEX_UnLock();
 		return;
 	}
 	if(m_animstate.source[m_animstate.current_anim] != NULL)
 		screen->BlitImage(x,y, img, m_animstate.source[m_animstate.current_anim]->frames[m_animstate.current_frame]);
 	else{
-		SDL_Rect r;
-		r.x = 0;
-		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
-		screen->BlitImage(x,y,img, r);
+		screen->BlitImage(x,y,img);
 	}
 	if(m_bar != NULL)
 		m_bar->Draw(screen);
@@ -342,24 +332,14 @@ void UnitWindow::Draw(cScreen *screen){
 		return;
 	MUTEX_Lock();
 	if(m_animstate.source == NULL){
-		SDL_Rect r;
-		r.x = 0;
-		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
-		screen->BlitImage(x,y,img, r);
+		screen->BlitImage(x,y,img);
 		MUTEX_UnLock();
 		return;
 	}
 	if(m_animstate.source[m_animstate.current_anim] != NULL)
 		screen->BlitImage(x,y, img, m_animstate.source[m_animstate.current_anim]->frames[m_animstate.current_frame]);
 	else{
-		SDL_Rect r;
-		r.x = 0;
-		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
-		screen->BlitImage(x,y,img, r);
+		screen->BlitImage(x,y,img);
 	}
 	//Draw MUG
 	if(m_target != NULL){
@@ -459,24 +439,14 @@ void TileWindow::Draw(cScreen *screen){
 		return;
 	MUTEX_Lock();
 	if(m_animstate.source == NULL){
-		SDL_Rect r;
-		r.x = 0;
-		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
-		screen->BlitImage(x,y,img, r);
+		screen->BlitImage(x,y,img);
 		MUTEX_UnLock();
 		return;
 	}
 	if(m_animstate.source[m_animstate.current_anim] != NULL)
 		screen->BlitImage(x,y, img, m_animstate.source[m_animstate.current_anim]->frames[m_animstate.current_frame]);
 	else{
-		SDL_Rect r;
-		r.x = 0;
-		r.y = 0;
-		r.w = img->GetSurf()->w;
-		r.h = img->GetSurf()->h;
-		screen->BlitImage(x,y,img, r);
+		screen->BlitImage(x,y,img);
 	}
 	//Draw MUG
 	if(m_target != NULL){
