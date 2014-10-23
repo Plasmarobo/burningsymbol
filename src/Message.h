@@ -23,13 +23,14 @@ public:
 
 class Printer{
 protected:
-	SDL_Surface *letters;
+	SDL_Texture *letters;
+	SDL_Renderer *m_renderer;
 	std::map<char,SDL_Rect> symbol_map; //Location and width of the symbols
 	int line_pad;
 	int space_x;
 	int space_y;
 public:
-	Printer(); //Load using Lua Script
+	Printer(SDL_Renderer *renderer); //Load using Lua Script
 	~Printer();
 	void AddSymbol(char sym, SDL_Rect &r);
 	void Print(cScreen *screen, std::string message, int x, int y);

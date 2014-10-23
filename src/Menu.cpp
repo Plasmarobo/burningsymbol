@@ -442,12 +442,12 @@ void MenuList::Draw(cScreen *screen){
 	SDL_Rect r;
 	if(img != NULL){
 		if(m_animstate.source == NULL){
-			SDL_Rect r;
-			r.x = 0;
-			r.y = 0;
-			r.w = img->GetSurf()->w;
-			r.h = img->GetSurf()->h;
-			screen->BlitImage(x,y,img, r);
+			//SDL_Rect r;
+			//r.x = 0;
+			//r.y = 0;
+			//r.w = img->GetSurf()->w;
+			//r.h = img->GetSurf()->h;
+			screen->BlitImage(x,y,img, bound);
 			//MUTEX_UnLock();
 			//return;
 		}

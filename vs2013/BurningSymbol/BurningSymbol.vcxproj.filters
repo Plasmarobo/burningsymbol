@@ -24,9 +24,6 @@
     <ClCompile Include="..\..\src\Clock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Controller.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\Data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -66,9 +63,6 @@
     <ClCompile Include="..\..\src\Message.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Node_traverse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\OrderedPool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -99,6 +93,12 @@
     <ClCompile Include="..\..\src\Unit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\astar.h">
@@ -114,9 +114,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\ContextItems.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\Controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Data.h">
@@ -206,5 +203,177 @@
     <ClInclude Include="..\..\src\Unit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\script\anti_press.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\anti_press_sub.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\Attack_Mode.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\attack_select.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\battle_item_select.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\build.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\build_log.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\burningsymbol.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\context_menu.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\context_system.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\deselect.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\ENT_STD.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\error.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\exit_menu.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\exit_program.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\font.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\Gaius_Death.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\Gaius_Invoke.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\Gaius_Level.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\Gaius_Load.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\game_end.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\game_idle.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\game_start.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\game_start_2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\invoke.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\item_db.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\item_menu.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\loadmap1_press.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\loadunit.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\map_idle.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\map_init.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\menutest1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\menutest1_1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\open_map.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\press.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\README.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\select.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\select_map_pos.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\serialentities.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\show_image.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\start_battle.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\start_move.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\sts_tileset.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\stsmap.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\submenu.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\tiles.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\tiles2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\tileset.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\unit_add_test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\unit_context_menu.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\unit_context_system.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\unitcontext.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\..\script\ut.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\script\error.lua">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -42,6 +42,7 @@ protected:
 public:
 	cScreen(int h, int w, int bpp);
 	~cScreen();
+	SDL_Renderer *GetRenderer();
 	bool IsLocked();
 	bool Lock(); //Try to lock the screen
 	bool MUTEX_LockBuffer();

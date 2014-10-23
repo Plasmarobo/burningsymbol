@@ -29,8 +29,9 @@ void cMessage::operator=(const cMessage &rhs){
 }
 
 
-Printer::Printer(){
+Printer::Printer(SDL_Renderer *renderer){
 	letters = NULL;
+	m_renderer = renderer;
 	line_pad = 2;
 	space_x = 16;
 	space_y = 32;
@@ -38,7 +39,7 @@ Printer::Printer(){
 }
 
 Printer::~Printer(){
-	SDL_FreeSurface(letters);
+	//SDL_FreeSurface(letters);
 	//delete letters;
 }
 void Printer::AddSymbol(char sym, SDL_Rect &r){
@@ -68,6 +69,7 @@ void Printer::Print(cScreen *screen, std::string message, int x, int y){
 			//screen->MUTEX_Lock();
 			//screen->MUTEX_LockBuffer();
 			screen->BlitSurf(x,y,letters,symbol_map[message[i]]);
+			
 			//screen->MUTEX_UnLock();
 			//screen->MUTEX_UnLockBuffer();
 			x += (symbol_map[message[i]].w);
@@ -182,7 +184,7 @@ void Printer::Write(cScreen *screen, cMessage *msg, unsigned int now){
 }
 
 void Printer::SetFont(std::string fname){
-	letters = IMG_Load(fname.c_str());
+	letters = SDL_CreateTextureFromSurface(m_renderer, IMG_Load(fname.c_str()));
 	if(! letters ){
 		printf("Font Load Failed: %s\n", IMG_GetError());
 		return;

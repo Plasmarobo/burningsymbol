@@ -36,6 +36,7 @@ struct IThreadData{
 
 class ResourceManager : public Mutexable{
 protected:
+	SDL_Renderer *m_renderer;
 	Input::EventQueue *m_input;
 	std::vector<EntityPool*> m_pools;
 	std::vector<cImage*> m_images;
@@ -65,7 +66,7 @@ protected:
 	
 public:
 	static ResourceManager *global_resource;
-	ResourceManager();
+	ResourceManager(SDL_Renderer *renderer);
 	ResourceManager(const ResourceManager &rhs);
 	~ResourceManager();
 	void operator=(const ResourceManager &rhs);

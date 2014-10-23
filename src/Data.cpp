@@ -48,7 +48,7 @@ Map *BuildMapFromFile(std::string filename, ResourceManager *res, std::vector<St
 	Coord *pls = NULL;
 	int countx = 0;
 	int county = 0;
-	Tile_Ref ***t;
+	Tile_Ref ***t = NULL;
 	std::basic_ifstream<char, std::char_traits<char> >::pos_type filep;
 	if(file.is_open()){
 		while(buffer != "TILEEND"){

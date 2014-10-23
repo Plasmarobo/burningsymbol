@@ -1,6 +1,6 @@
 #include "Graphics.h"
 #include <SDL.h>
-#include "SDL_image.h"
+#include <SDL_image.h>
 
 
 SDL_Rect MakeRECT(int x, int y, int w, int h){
@@ -82,6 +82,11 @@ cScreen::~cScreen(){
 	pthread_mutex_destroy(&bmutex);
 #endif
 	SDL_Quit();
+}
+
+SDL_Renderer* cScreen::GetRenderer()
+{
+	return m_renderer;
 }
 
 bool cScreen::IsLocked(){

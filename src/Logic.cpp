@@ -1,6 +1,7 @@
 #include "Logic.h"
 //#include "State.h"
 #include "Scripting.h"
+#include "Config.h"
 #include <iostream>
 #ifdef M_THREAD
 void *LogicThread(void *resources){
@@ -21,7 +22,7 @@ void *LogicThread(void *resources){
 	//base->SetScriptingContext(m_lua);
 	stack_lock.MUTEX_Lock();
 	sstack->push_back(base);
-	base->Create(false, false, 0, "game_start.txt", "game_idle.txt", "game_end.txt", sstack);
+	base->Create(false, false, 0, Config::Global()->GetScript("game_start.txt"), Config::Global()->GetScript("game_idle.txt"), Config::Global()->GetScript("game_end.txt"), sstack);
 	stack_lock.MUTEX_UnLock();
 	bool local = true;
 	while(local){

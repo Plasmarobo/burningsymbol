@@ -1,18 +1,19 @@
 #ifdef WIN32
-#pragma comment(lib, "SDL.lib")
-#pragma comment(lib, "SDLmain.lib")
+#pragma comment(lib, "SDL2.lib")
+#pragma comment(lib, "SDL2main.lib")
 #endif
 
 #include <SDL.h>
 //#include "Input.h"
 #include "Graphics.h"
-#include "Controller.h"
+#include "Engine.h"
+#include "Config.h"
 
 
 int main(int argc, char*argv[])
 {
 	
-	
+	Config *game_config = new Config("game.cfg");
 	
 	 //Prevent multiread/write to system_ok
 	//This is implicitly the resource thread
@@ -24,6 +25,7 @@ int main(int argc, char*argv[])
 	game->Start();
 	game->Run();
 	delete game;
+	delete game_config;
 	//while(system){
 	//	Input::ScanInput(i, system_ok);
 	//	Input::DumpInputToCMD(i);

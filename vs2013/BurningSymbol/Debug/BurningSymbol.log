@@ -1,8 +1,10 @@
-﻿Build started 10/10/2014 8:14:15 PM.
+﻿Build started 10/22/2014 8:01:33 PM.
      1>Project "C:\Users\Austen\Documents\GitHub\burningsymbol\vs2013\BurningSymbol\BurningSymbol.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\astar.cpp ..\..\src\Battle.cpp ..\..\src\Clock.cpp ..\..\src\Controller.cpp ..\..\src\Data.cpp ..\..\src\Dialog.cpp ..\..\src\Entities.cpp ..\..\src\EntityPool.cpp ..\..\src\Graphics.cpp ..\..\src\Index.cpp ..\..\src\Input.cpp ..\..\src\Items.cpp ..\..\src\Logic.cpp ..\..\src\main.cpp ..\..\src\Map.cpp ..\..\src\Menu.cpp ..\..\src\Message.cpp ..\..\src\Node_traverse.cpp ..\..\src\OrderedPool.cpp ..\..\src\Resources.cpp ..\..\src\Scripting.cpp ..\..\src\ScriptingLibraries.cpp ..\..\src\Sequence.cpp ..\..\src\State.cpp ..\..\src\Status.cpp ..\..\src\Threading.cpp ..\..\src\Tile.cpp ..\..\src\Unit.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D M_THREAD /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\astar.cpp ..\..\src\Battle.cpp ..\..\src\Clock.cpp ..\..\src\Config.cpp ..\..\src\Engine.cpp ..\..\src\Data.cpp ..\..\src\Dialog.cpp ..\..\src\Entities.cpp ..\..\src\EntityPool.cpp ..\..\src\Graphics.cpp ..\..\src\Index.cpp ..\..\src\Input.cpp ..\..\src\Items.cpp ..\..\src\Logic.cpp ..\..\src\main.cpp ..\..\src\Map.cpp ..\..\src\Menu.cpp ..\..\src\Message.cpp ..\..\src\OrderedPool.cpp ..\..\src\Resources.cpp ..\..\src\Scripting.cpp ..\..\src\ScriptingLibraries.cpp ..\..\src\Sequence.cpp ..\..\src\State.cpp ..\..\src\Status.cpp ..\..\src\Threading.cpp ..\..\src\Tile.cpp ..\..\src\Unit.cpp
          Unit.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
@@ -13,6 +15,8 @@
      1>c:\users\austen\documents\github\burningsymbol\src\unit.cpp(188): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.cpp(192): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
          Tile.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
@@ -20,8 +24,12 @@
      1>c:\users\austen\documents\github\burningsymbol\src\tile.cpp(124): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\tile.cpp(131): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
          Threading.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\threading.cpp(53): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
          Status.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
@@ -38,28 +46,20 @@
      1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(342): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(356): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(359): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(445): error C2027: use of undefined type 'SDL_Texture'
-                 f:\lib\sdl2-2.0.3\include\sdl_render.h(127) : see declaration of 'SDL_Texture'
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(445): error C2227: left of '->w' must point to class/struct/union/generic type
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(446): error C2027: use of undefined type 'SDL_Texture'
-                 f:\lib\sdl2-2.0.3\include\sdl_render.h(127) : see declaration of 'SDL_Texture'
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(446): error C2227: left of '->h' must point to class/struct/union/generic type
+     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(442): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(447): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(452): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(457): error C2027: use of undefined type 'SDL_Texture'
-                 f:\lib\sdl2-2.0.3\include\sdl_render.h(127) : see declaration of 'SDL_Texture'
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(457): error C2227: left of '->w' must point to class/struct/union/generic type
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(458): error C2027: use of undefined type 'SDL_Texture'
-                 f:\lib\sdl2-2.0.3\include\sdl_render.h(127) : see declaration of 'SDL_Texture'
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(458): error C2227: left of '->h' must point to class/struct/union/generic type
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(459): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(468): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(449): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\austen\documents\github\burningsymbol\src\status.cpp(458): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
          State.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
          Sequence.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
@@ -68,6 +68,8 @@
      1>c:\users\austen\documents\github\burningsymbol\src\sequence.cpp(26): warning C4244: '=' : conversion from 'double' to 'unsigned int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\sequence.cpp(28): warning C4244: '=' : conversion from 'double' to 'unsigned int', possible loss of data
          ScriptingLibraries.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
@@ -149,56 +151,43 @@
      1>c:\users\austen\documents\github\burningsymbol\src\scriptinglibraries.cpp(1808): warning C4244: 'argument' : conversion from 'lua_Number' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\scriptinglibraries.cpp(1813): warning C4244: 'argument' : conversion from 'lua_Number' to 'int', possible loss of data
          Scripting.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
          Resources.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(80): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(146): warning C4018: '>=' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(173): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(184): error C2664: 'cImage::cImage(const cImage &)' : cannot convert argument 2 from 'SDL_Surface *' to 'SDL_Texture *'
-                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(375): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(384): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(402): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(83): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(149): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(176): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(380): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(389): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(407): warning C4018: '<' : signed/unsigned mismatch
          OrderedPool.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
-         Node_traverse.cpp
-     1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\austen\documents\github\burningsymbol\src\node_traverse.cpp(5): error C2065: 'node' : undeclared identifier
-     1>c:\users\austen\documents\github\burningsymbol\src\node_traverse.cpp(5): error C2065: 'graph' : undeclared identifier
-     1>c:\users\austen\documents\github\burningsymbol\src\node_traverse.cpp(7): error C2065: 'node' : undeclared identifier
-     1>c:\users\austen\documents\github\burningsymbol\src\node_traverse.cpp(7): error C2059: syntax error : ','
-     1>c:\users\austen\documents\github\burningsymbol\src\node_traverse.cpp(7): error C2059: syntax error : '>'
-     1>c:\users\austen\documents\github\burningsymbol\src\node_traverse.cpp(7): error C2976: 'std::vector' : too few template arguments
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
-     1>c:\users\austen\documents\github\burningsymbol\src\node_traverse.cpp(7): error C2955: 'std::vector' : use of class template requires template argument list
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
-     1>c:\users\austen\documents\github\burningsymbol\src\node_traverse.cpp(7): fatal error C1903: unable to recover from previous error(s); stopping compilation
          Message.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(66): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(70): error C2664: 'void cScreen::BlitSurf(int,int,SDL_Texture *,SDL_Rect)' : cannot convert argument 3 from 'SDL_Surface *' to 'SDL_Texture *'
-                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(83): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(86): error C2664: 'void cScreen::BlitSurf(int,int,SDL_Texture *,SDL_Rect)' : cannot convert argument 3 from 'SDL_Surface *' to 'SDL_Texture *'
-                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(115): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(119): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(120): error C2664: 'void cScreen::BlitSurf(int,int,SDL_Texture *,SDL_Rect)' : cannot convert argument 3 from 'SDL_Surface *' to 'SDL_Texture *'
-                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(145): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(67): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(85): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(117): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(121): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\austen\documents\github\burningsymbol\src\message.cpp(147): warning C4018: '<' : signed/unsigned mismatch
          Menu.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
@@ -212,17 +201,13 @@
      1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(259): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(333): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(366): warning C4018: '>=' : signed/unsigned mismatch
-     1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(448): error C2027: use of undefined type 'SDL_Texture'
-                 f:\lib\sdl2-2.0.3\include\sdl_render.h(127) : see declaration of 'SDL_Texture'
-     1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(448): error C2227: left of '->w' must point to class/struct/union/generic type
-     1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(449): error C2027: use of undefined type 'SDL_Texture'
-                 f:\lib\sdl2-2.0.3\include\sdl_render.h(127) : see declaration of 'SDL_Texture'
-     1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(449): error C2227: left of '->h' must point to class/struct/union/generic type
      1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(450): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(455): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(457): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\menu.cpp(461): warning C4018: '>' : signed/unsigned mismatch
          Map.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
@@ -258,35 +243,53 @@
      1>c:\users\austen\documents\github\burningsymbol\src\map.cpp(1254): warning C4018: '>=' : signed/unsigned mismatch
      1>c:\users\austen\documents\github\burningsymbol\src\map.cpp(1285): warning C4018: '<' : signed/unsigned mismatch
          main.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
          Logic.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
          Items.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
          Input.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\input.cpp(39): warning C4800: 'double' : forcing value to bool 'true' or 'false' (performance warning)
          Index.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
          Graphics.cpp
-     1>c:\users\austen\documents\github\burningsymbol\src\graphics.cpp(101): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
-         Generating Code...
-         Compiling...
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
+     1>c:\users\austen\documents\github\burningsymbol\src\graphics.cpp(106): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
          EntityPool.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+         Generating Code...
+     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(371): warning C4715: 'ResourceManager::SelectPartyUnit' : not all control paths return a value
+     1>c:\users\austen\documents\github\burningsymbol\src\resources.cpp(377): warning C4715: 'ResourceManager::SelectPartyUnit' : not all control paths return a value
+         Compiling...
          Entities.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
@@ -297,29 +300,84 @@
      1>c:\users\austen\documents\github\burningsymbol\src\entities.cpp(235): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.cpp(237): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
          Dialog.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
          Data.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
      1>c:\users\austen\documents\github\burningsymbol\src\data.cpp(249): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\austen\documents\github\burningsymbol\src\data.cpp(44): warning C4101: 'd' : unreferenced local variable
-         Controller.cpp
+         Engine.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(90): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(91): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\entities.h(92): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\austen\documents\github\burningsymbol\src\unit.h(120): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+         Config.cpp
+     1>c:\users\austen\documents\github\burningsymbol\src\threading.h(5): warning C4005: 'M_THREAD' : macro redefinition
+                 command-line arguments :  see previous definition of 'M_THREAD'
          Clock.cpp
          Battle.cpp
          astar.cpp
          Generating Code...
-     1>c:\users\austen\documents\github\burningsymbol\src\data.cpp(312): error C4703: potentially uninitialized local pointer variable 't' used
-     1>Done Building Project "C:\Users\Austen\Documents\GitHub\burningsymbol\vs2013\BurningSymbol\BurningSymbol.vcxproj" (Rebuild target(s)) -- FAILED.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Austen\Documents\GitHub\burningsymbol\vs2013\BurningSymbol\$..\..\bin\BurningSymbol.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib lua52.lib pthreadVC2.lib pthreadVC2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Austen\Documents\GitHub\burningsymbol\vs2013\BurningSymbol\$..\..\bin\BurningSymbol.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Austen\Documents\GitHub\burningsymbol\vs2013\BurningSymbol\$..\..\bin\BurningSymbol.lib" /MACHINE:X86 Debug\astar.obj
+         Debug\Battle.obj
+         Debug\Clock.obj
+         Debug\Config.obj
+         Debug\Engine.obj
+         Debug\Data.obj
+         Debug\Dialog.obj
+         Debug\Entities.obj
+         Debug\EntityPool.obj
+         Debug\Graphics.obj
+         Debug\Index.obj
+         Debug\Input.obj
+         Debug\Items.obj
+         Debug\Logic.obj
+         Debug\main.obj
+         Debug\Map.obj
+         Debug\Menu.obj
+         Debug\Message.obj
+         Debug\OrderedPool.obj
+         Debug\Resources.obj
+         Debug\Scripting.obj
+         Debug\ScriptingLibraries.obj
+         Debug\Sequence.obj
+         Debug\State.obj
+         Debug\Status.obj
+         Debug\Threading.obj
+         Debug\Tile.obj
+         Debug\Unit.obj
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+         BurningSymbol.vcxproj -> C:\Users\Austen\Documents\GitHub\burningsymbol\vs2013\BurningSymbol\$..\..\bin\BurningSymbol.exe
+       PostBuildEvent:
+         copy F:\lib\SDL2-2.0.3\lib\x86\SDL2.dll C:\Users\Austen\Documents\GitHub\burningsymbol\vs2013\BurningSymbol\$..\..\bin\
+         copy F:\lib\SDL2_image-2.0.0\lib\x86\*.dll C:\Users\Austen\Documents\GitHub\burningsymbol\vs2013\BurningSymbol\$..\..\bin\
+         copy F:\lib\pthreads\dll\x86\pthreadVC2.dll
+         
+         :VCEnd
+                 1 file(s) copied.
+         F:\lib\SDL2_image-2.0.0\lib\x86\libjpeg-9.dll
+         F:\lib\SDL2_image-2.0.0\lib\x86\libpng16-16.dll
+         F:\lib\SDL2_image-2.0.0\lib\x86\libtiff-5.dll
+         F:\lib\SDL2_image-2.0.0\lib\x86\libwebp-4.dll
+         F:\lib\SDL2_image-2.0.0\lib\x86\SDL2_image.dll
+         F:\lib\SDL2_image-2.0.0\lib\x86\zlib1.dll
+                 6 file(s) copied.
+                 1 file(s) copied.
+     1>Done Building Project "C:\Users\Austen\Documents\GitHub\burningsymbol\vs2013\BurningSymbol\BurningSymbol.vcxproj" (Rebuild target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:17.84
+Time Elapsed 00:00:17.81

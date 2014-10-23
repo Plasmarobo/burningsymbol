@@ -6,7 +6,7 @@
 #include "luaconf.h"
 #include "lualib.h"
 #include "lauxlib.h"
-#include "Controller.h"
+#include "Engine.h"
 #include "State.h"
 #include "Resources.h"
 #include <string>

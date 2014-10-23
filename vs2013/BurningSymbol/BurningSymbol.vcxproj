@@ -43,6 +43,7 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>F:\lib\pthreads\include;F:\lib\lua32\include;F:\lib\SDL2_image-2.0.0\include;F:\lib\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
     <LibraryPath>F:\lib\pthreads\lib\x86;F:\lib\lua32;F:\lib\SDL2_image-2.0.0\lib\x86;F:\lib\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$..\..\bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -53,17 +54,20 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>M_THREAD;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;lua52.lib;pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;lua52.lib;pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy F:\lib\SDL2-2.0.3\lib\x86\SDL2.dll $(OutputPath)
-copy F:\lib\SDL2_image-2.0.0\lib\x86\*.dll $(OutputPath)</Command>
+copy F:\lib\SDL2_image-2.0.0\lib\x86\*.dll $(OutputPath)
+copy F:\lib\pthreads\dll\x86\pthreadVC2.dll
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -88,7 +92,8 @@ copy F:\lib\SDL2_image-2.0.0\lib\x86\*.dll $(OutputPath)</Command>
     <ClCompile Include="..\..\src\astar.cpp" />
     <ClCompile Include="..\..\src\Battle.cpp" />
     <ClCompile Include="..\..\src\Clock.cpp" />
-    <ClCompile Include="..\..\src\Controller.cpp" />
+    <ClCompile Include="..\..\src\Config.cpp" />
+    <ClCompile Include="..\..\src\Engine.cpp" />
     <ClCompile Include="..\..\src\Data.cpp" />
     <ClCompile Include="..\..\src\Dialog.cpp" />
     <ClCompile Include="..\..\src\Entities.cpp" />
@@ -102,7 +107,6 @@ copy F:\lib\SDL2_image-2.0.0\lib\x86\*.dll $(OutputPath)</Command>
     <ClCompile Include="..\..\src\Map.cpp" />
     <ClCompile Include="..\..\src\Menu.cpp" />
     <ClCompile Include="..\..\src\Message.cpp" />
-    <ClCompile Include="..\..\src\Node_traverse.cpp" />
     <ClCompile Include="..\..\src\OrderedPool.cpp" />
     <ClCompile Include="..\..\src\Resources.cpp" />
     <ClCompile Include="..\..\src\Scripting.cpp" />
@@ -119,8 +123,9 @@ copy F:\lib\SDL2_image-2.0.0\lib\x86\*.dll $(OutputPath)</Command>
     <ClInclude Include="..\..\src\Battle.h" />
     <ClInclude Include="..\..\src\Chapter.h" />
     <ClInclude Include="..\..\src\Clock.h" />
+    <ClInclude Include="..\..\src\Config.h" />
     <ClInclude Include="..\..\src\ContextItems.h" />
-    <ClInclude Include="..\..\src\Controller.h" />
+    <ClInclude Include="..\..\src\Engine.h" />
     <ClInclude Include="..\..\src\Data.h" />
     <ClInclude Include="..\..\src\Dialog.h" />
     <ClInclude Include="..\..\src\Entities.h" />
@@ -150,6 +155,64 @@ copy F:\lib\SDL2_image-2.0.0\lib\x86\*.dll $(OutputPath)</Command>
     <ClInclude Include="..\..\src\Tile.h" />
     <ClInclude Include="..\..\src\Trigger.h" />
     <ClInclude Include="..\..\src\Unit.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\script\anti_press.txt" />
+    <Text Include="..\..\script\anti_press_sub.txt" />
+    <Text Include="..\..\script\Attack_Mode.txt" />
+    <Text Include="..\..\script\attack_select.txt" />
+    <Text Include="..\..\script\battle_item_select.txt" />
+    <Text Include="..\..\script\build.txt" />
+    <Text Include="..\..\script\build_log.txt" />
+    <Text Include="..\..\script\burningsymbol.txt" />
+    <Text Include="..\..\script\context_menu.txt" />
+    <Text Include="..\..\script\context_system.txt" />
+    <Text Include="..\..\script\deselect.txt" />
+    <Text Include="..\..\script\ENT_STD.txt" />
+    <Text Include="..\..\script\error.txt" />
+    <Text Include="..\..\script\exit_menu.txt" />
+    <Text Include="..\..\script\exit_program.txt" />
+    <Text Include="..\..\script\font.txt" />
+    <Text Include="..\..\script\Gaius_Death.txt" />
+    <Text Include="..\..\script\Gaius_Invoke.txt" />
+    <Text Include="..\..\script\Gaius_Level.txt" />
+    <Text Include="..\..\script\Gaius_Load.txt" />
+    <Text Include="..\..\script\game_end.txt" />
+    <Text Include="..\..\script\game_idle.txt" />
+    <Text Include="..\..\script\game_start.txt" />
+    <Text Include="..\..\script\game_start_2.txt" />
+    <Text Include="..\..\script\invoke.txt" />
+    <Text Include="..\..\script\item_db.txt" />
+    <Text Include="..\..\script\item_menu.txt" />
+    <Text Include="..\..\script\loadmap1_press.txt" />
+    <Text Include="..\..\script\loadunit.txt" />
+    <Text Include="..\..\script\map_idle.txt" />
+    <Text Include="..\..\script\map_init.txt" />
+    <Text Include="..\..\script\menutest1.txt" />
+    <Text Include="..\..\script\menutest1_1.txt" />
+    <Text Include="..\..\script\open_map.txt" />
+    <Text Include="..\..\script\press.txt" />
+    <Text Include="..\..\script\README.txt" />
+    <Text Include="..\..\script\select.txt" />
+    <Text Include="..\..\script\select_map_pos.txt" />
+    <Text Include="..\..\script\serialentities.txt" />
+    <Text Include="..\..\script\show_image.txt" />
+    <Text Include="..\..\script\start_battle.txt" />
+    <Text Include="..\..\script\start_move.txt" />
+    <Text Include="..\..\script\stsmap.txt" />
+    <Text Include="..\..\script\sts_tileset.txt" />
+    <Text Include="..\..\script\submenu.txt" />
+    <Text Include="..\..\script\tiles.txt" />
+    <Text Include="..\..\script\tiles2.txt" />
+    <Text Include="..\..\script\tileset.txt" />
+    <Text Include="..\..\script\unitcontext.txt" />
+    <Text Include="..\..\script\unit_add_test.txt" />
+    <Text Include="..\..\script\unit_context_menu.txt" />
+    <Text Include="..\..\script\unit_context_system.txt" />
+    <Text Include="..\..\script\ut.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\script\error.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

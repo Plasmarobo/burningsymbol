@@ -6,8 +6,9 @@
 #include <fstream>
 #include <sstream>
 #include "Data.h"
-ResourceManager::ResourceManager(){
-	//m_input = new Input::EventQueue;
+#include "Config.h"
+ResourceManager::ResourceManager(SDL_Renderer *renderer){
+	m_renderer = renderer;
 	m_input = NULL;
 	m_printer = NULL;
 	m_max_party = 2;
@@ -23,6 +24,7 @@ ResourceManager::ResourceManager(){
 }
 
 ResourceManager::ResourceManager(const ResourceManager &rhs){
+	m_renderer = rhs.m_renderer;
 	m_gold = rhs.m_gold;
 	m_input = rhs.m_input;
 	m_pools = rhs.m_pools;
@@ -41,6 +43,7 @@ ResourceManager::ResourceManager(const ResourceManager &rhs){
 }
 
 void ResourceManager::operator=(const ResourceManager &rhs){
+	m_renderer = rhs.m_renderer;
 	m_gold = rhs.m_gold;
 	m_input = rhs.m_input;
 	m_pools = rhs.m_pools;
@@ -66,7 +69,7 @@ Input::EventQueue *ResourceManager::GetEvents() { return m_input; }
 
 void ResourceManager::Initialize(){
 	m_input = new Input::EventQueue;
-	m_printer = new Printer;
+	m_printer = new Printer(m_renderer);
 	global_resource = this;
 	m_party_buffer = new std::string[m_max_party];
 }
@@ -166,7 +169,7 @@ void ResourceManager::ClearMessages(){
 	MUTEX_UnLock();
 }
 
-cImage* ResourceManager::GetImage(std::string name, SDL_Renderer *renderer){
+cImage* ResourceManager::GetImage(std::string name){
 	//Warning: This is referenced from within a mutex lock, and outside.
 	//Add logic for conditional locking
 	//MUTEX_Lock();
@@ -175,14 +178,14 @@ cImage* ResourceManager::GetImage(std::string name, SDL_Renderer *renderer){
 			return m_images[i];
 	}
 	//Create and image structure and load it
-	SDL_Surface *surf = IMG_Load(name.c_str());
+	SDL_Surface *surf = IMG_Load(Config::Global()->GetAsset(name).c_str());
 	if(! surf )
 	{
 		printf("Image Load: %s\n", IMG_GetError());
 		return NULL;
 	}
 
-	cImage *img = new cImage(name, SDL_CreateTextureFromSurface(renderer, surf));
+	cImage *img = new cImage(name, SDL_CreateTextureFromSurface(m_renderer, surf));
 	SDL_FreeSurface(surf);
 	m_images.push_back(img);
 	//MUTEX_UnLock();
